@@ -1,0 +1,95 @@
+// =====================================================
+// M-Lang Grand Showcase: Demonstrating 100% of Features
+// =====================================================
+
+// 1. Recursive Function with Base Cases & Conditionals
+fn factorial(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+// 2. Iterative Function with While Loop, Comparisons & Arithmetic
+fn sumRange(start, end) {
+    let sum = 0;
+    let current = start;
+
+    while (current <= end) {
+        sum = sum + current;
+        current = current + 1;
+    }
+
+    return sum;
+}
+
+// 3. Function with Complex Logic & Comparison Operators
+fn evaluateGrade(score, maxScore) {
+    let percentage = (score * 100) / maxScore;
+    print("Evaluating percentage: " + percentage + "%");
+
+    if (percentage >= 90) {
+        return "Grade A - Outstanding!";
+    } else {
+        if (percentage >= 75) {
+            return "Grade B - Very Good";
+        } else {
+            if (percentage >= 50) {
+                return "Grade C - Passed";
+            } else {
+                return "Grade F - Needs Improvement";
+            }
+        }
+    }
+}
+
+// 4. Lexical Scope & Block Isolation Test
+fn testScope() {
+    let globalLike = 100;
+    print("Outer scope variable: " + globalLike);
+    
+    {
+        let scopedVar = 50;
+        let innerTotal = globalLike + scopedVar;
+        print("Inner block calculation: " + innerTotal);
+    }
+}
+
+// =================== Execution ===================
+print("--- [1] Testing Recursion (Factorial) ---");
+let fact5 = factorial(5);
+print("Factorial of 5: " + fact5);
+
+let fact6 = factorial(6);
+print("Factorial of 6: " + fact6);
+
+print("");
+print("--- [2] Testing Iterative While Loop & Accumulator ---");
+let total1to10 = sumRange(1, 10);
+print("Sum of numbers from 1 to 10: " + total1to10);
+
+print("");
+print("--- [3] Testing Comparisons (==, !=, <, <=, >, >=) ---");
+let a = 42;
+let b = 42;
+if (a == b) {
+    print("Comparison (a == b): true");
+}
+if (a != 50) {
+    print("Comparison (a != 50): true");
+}
+if (a >= 40) {
+    print("Comparison (a >= 40): true");
+}
+
+print("");
+print("--- [4] Testing Multi-branch Grading Logic ---");
+let myReport = evaluateGrade(88, 100);
+print(myReport);
+
+print("");
+print("--- [5] Testing Scoped Blocks ---");
+testScope();
+
+print("");
+print("All language features executed successfully!");

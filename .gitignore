@@ -1,0 +1,12 @@
+# Compiled binaries & object files
+build/
+compiler
+*.o
+*.out
+
+# macOS metadata
+.DS_Store
+
+# IDE / Editor folders
+.vscode/
+.idea/

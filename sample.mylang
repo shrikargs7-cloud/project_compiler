@@ -1,0 +1,25 @@
+// Functions and Recursion Test in M-Lang
+
+fn square(x) {
+    return x * x;
+}
+
+fn factorial(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+fn greet(name) {
+    print("Welcome to M-Lang, " + name + "!");
+}
+
+greet("Developer");
+
+let num = 5;
+let fact = factorial(num);
+print("Factorial of 5 is: " + fact);
+
+let sq = square(12);
+print("Square of 12 is: " + sq);
